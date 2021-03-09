@@ -1,0 +1,457 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"depar",
+				"departamentos"
+			],
+			[
+				"p",
+				"Pais"
+			],
+			[
+				"co",
+				"confir_correo"
+			],
+			[
+				"t",
+				"table\tTag"
+			],
+			[
+				"AC",
+				"action\tAttr"
+			],
+			[
+				"ac",
+				"action\tAttr"
+			],
+			[
+				"re",
+				"required\tAttr"
+			],
+			[
+				"en",
+				"entera"
+			],
+			[
+				"opt",
+				"option\tTag"
+			],
+			[
+				"h",
+				"h3\tTag"
+			],
+			[
+				"op",
+				"option\tTag"
+			],
+			[
+				"se",
+				"select\tTag"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"strto",
+				"strtoupper"
+			],
+			[
+				"pass",
+				"password"
+			],
+			[
+				"agend",
+				"Agenda"
+			],
+			[
+				"numer",
+				"numeroanalizado"
+			],
+			[
+				"num",
+				"numoficina"
+			],
+			[
+				"numero",
+				"numeroperfecto"
+			],
+			[
+				"divisores",
+				"divisores2"
+			],
+			[
+				"div",
+				"divisores2"
+			],
+			[
+				"palabr",
+				"palabra2"
+			],
+			[
+				"sup",
+				"supera3"
+			],
+			[
+				"arrayke",
+				"array_keys"
+			],
+			[
+				"supera",
+				"supera2"
+			],
+			[
+				"A",
+				"Ana"
+			],
+			[
+				"Pe",
+				"Pedro"
+			],
+			[
+				"if",
+				"if\tif …"
+			],
+			[
+				"Pro",
+				"promediogeneral"
+			],
+			[
+				"mayo",
+				"mayorpromedio"
+			],
+			[
+				"pro",
+				"PromedioGrupoA"
+			],
+			[
+				"gpro",
+				"PromedioGrupoB"
+			],
+			[
+				"pr",
+				"PromedioGrupoA"
+			],
+			[
+				"gru",
+				"grupoB"
+			],
+			[
+				"grupo",
+				"grupoA"
+			],
+			[
+				"grup",
+				"grupoB"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"datos",
+				"datos2"
+			],
+			[
+				"arrayco",
+				"array_count_values"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"break",
+				"break"
+			],
+			[
+				"respues",
+				"respuesta1"
+			],
+			[
+				"res",
+				"respuesta3"
+			],
+			[
+				"respu",
+				"respuesta1"
+			],
+			[
+				"Res",
+				"respuesta1"
+			],
+			[
+				"per",
+				"perimetro3"
+			],
+			[
+				"area",
+				"area3"
+			],
+			[
+				"peri",
+				"perimetro1"
+			],
+			[
+				"are",
+				"area2"
+			],
+			[
+				"lad",
+				"ladoDosTriangulo"
+			],
+			[
+				"lado",
+				"ladoUnoTriangulo"
+			],
+			[
+				"nume",
+				"numeroDos"
+			],
+			[
+				"nu",
+				"numeroDos"
+			],
+			[
+				"total",
+				"total3"
+			],
+			[
+				"toal",
+				"total3"
+			],
+			[
+				"nota",
+				"nota2"
+			],
+			[
+				"nombe",
+				"nombre2"
+			],
+			[
+				"strt",
+				"strtoupper"
+			],
+			[
+				"no",
+				"nombre"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"tex",
+				"texto1"
+			],
+			[
+				"text",
+				"texto2"
+			],
+			[
+				"echo",
+				"echo"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/David Nogales/git/JSTutorial/js/load-csv.js",
+		"/C/Users/David Nogales/git/JSTutorial/js/main.js",
+		"/C/xampp/htdocs/diplomado/html/pagina2.html",
+		"/C/xampp/htdocs/diplomado/html/guardar.php",
+		"/C/xampp/htdocs/diplomado/formulario/main.php",
+		"/C/xampp/htdocs/diplomado/pdo/procesosUsuarios.php",
+		"/C/xampp/htdocs/diplomado/pdo/Usuarios.php",
+		"/C/xampp/htdocs/diplomado/pdo/Conexion.php",
+		"/C/xampp/htdocs/diplomado/formulario/results.php",
+		"/C/xampp/htdocs/diplomado/html/pagina3.html",
+		"/C/Users/David Nogales/Desktop/Algoritmo de Division.jar",
+		"/C/xampp/htdocs/diplomado/formulario/formulario.php",
+		"/C/xampp/htdocs/diplomado/ejercicio 3/Password.php",
+		"/C/xampp/htdocs/diplomado/ejercicio 3/main.php",
+		"/C/xampp/htdocs/diplomado/libros/main.php",
+		"/C/xampp/htdocs/diplomado/ejercicio 2 de clases/contacto.php",
+		"/C/xampp/htdocs/diplomado/ejercicio 2 de clases/main.php",
+		"/C/xampp/htdocs/diplomado/ejercicio 2 de clases/agenda.php",
+		"/C/xampp/htdocs/diplomado/libros/libro.php",
+		"/C/xampp/htdocs/diplomado/funcionescadenas/index.php",
+		"/C/xampp/htdocs/diplomado/variables/index.php",
+		"/C/xampp/htdocs/diplomado/modulo 2/index.php",
+		"/C/xampp/htdocs/diplomado/modulo 2/ejercicios arrays.php",
+		"/C/xampp/htdocs/diplomado/ejerciciosarrays/ejercicios arrays.php",
+		"/C/xampp/htdocs/diplomado/ejerciciosarrays/ejercicios2.php",
+		"/C/xampp/htdocs/diplomado/ejerciciosarrays/ejercicios3.php",
+		"/C/xampp/htdocs/diplomado/ejercicios ciclos/ejercicioswhile.php",
+		"/C/xampp/htdocs/diplomado/poo/gato.php",
+		"/C/xampp/htdocs/diplomado/poo/casa.php",
+		"/C/xampp/htdocs/diplomado/poo/main.php",
+		"/C/xampp/htdocs/diplomado/ejerciciosarrays/ejerciciosarrays3.php",
+		"/C/xampp/htdocs/diplomado/ejercicios operadores/index.php",
+		"/C/xampp/htdocs/diplomado/ejercicios variables/index2.php",
+		"/C/xampp/htdocs/diplomado/ejercicios variables/index.php",
+		"/C/xampp/htdocs/diplomado/tiposdedatos/index.php",
+		"/C/xampp/htdocs/diplomado/holamundo/index.php",
+		"/C/xampp/htdocs/diplomado/variables"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 219.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
