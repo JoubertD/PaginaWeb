@@ -1,9 +1,26 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,300&display=swap');
+
  [value = "A. Mascotas"] {
 	color: lightblue;
 
 }
-[id="Inicio"]{
-	text-align: center;
-	size: 50px;
-	color: red;
+
+
+
+
+
+body{
+	font-family: 'Montserrat', sans-serif;
+	overflow-x: hidden;
+	background: black;
+}
+
+[id="Info"]{
+	position: absolute;
+  bottom: 10px;
+  width: 50%;
+  border: 3px solid #8AC007;
+
+
 }
