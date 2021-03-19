@@ -1,4 +1,9 @@
-*{
-	color: black;
+ [value = "A. Mascotas"] {
+	color: lightblue;
 
+}
+[id="Inicio"]{
+	text-align: center;
+	size: 50px;
+	color: red;
 }
