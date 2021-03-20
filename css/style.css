@@ -16,6 +16,11 @@ body{
 	background: black;
 	color: white;
 }
+select{
+	color: white;
+	background: white;
+	background-color: black;
+}
 table{
 	color: white;
 	border-style: solid;
@@ -30,6 +35,7 @@ table{
   bottom: 10px;
   width: 50%;
   border: 3px solid #8AC007;
-
-
+}
+[id="filtrado"]{
+	color: white;
 }
