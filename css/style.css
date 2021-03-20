@@ -20,6 +20,9 @@ table{
 	color: white;
 	border-style: solid;
 	border-color: blue;
+	width: 100%;
+	margin: 0 auto;
+	font-size: 20px;
 }
 
 [id="Info"]{
