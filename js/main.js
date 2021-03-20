@@ -4,6 +4,17 @@
 /*
  * Multi-line comments
  */
+ 
+// Loading a CSV using D3
+d3.dsv( ";", "../data/pets-citizens.csv" )
+  .then( function( data ) {
+   for (var i = data.length - 1; i >= 0; i--) {
+    console.log(data[i]);
+   }
+  } )
+  .catch( function( error ) {
+    // handle error   
+  } );
 
 // Printing in console
 console.log( "Hello world!" );
@@ -15,7 +26,7 @@ console.log( "Hello world!" );
 
 // undefined
 
-var und;
+var und = 0;
 console.log( "The type of und variable is", typeof und );
 
 // number
@@ -181,14 +192,12 @@ function helloWorldWithDefaultParam( name = "student" ) {
 console.log( helloWorldWithDefaultParam() );
 
 // Another way to define functions using arrow notation
-var helloWorldArrow = ( name = "student" ) => { 
-  return `Hello, ${name}! Using arrow function`
-};
+let helloWorldArrow = ( name = "student" ) => `Hello, ${name}! Using arrow function`;
 
 console.log( helloWorldArrow() );
 
 // If the function has only one statement, you can avoid the return and the brackets
-var helloWorldArrowOneLine = ( name = "student" ) => `Hello, ${name}! Using arrow function one line`;
+let helloWorldArrowOneLine = ( name = "student" ) => `Hello, ${name}! Using arrow function one line`;
 
 console.log( helloWorldArrowOneLine() );
 
@@ -223,7 +232,7 @@ console.log( studentsAgeAvg );
 
 // Differences between == and === (!= and !==)
 console.log( 1 == "1" );
-console.log( 1 === "1" );
+console.log( 1 === 1 );
 
 // Conditional (ternary) operator
 var courseIsFull;
