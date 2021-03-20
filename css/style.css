@@ -17,6 +17,8 @@ body{
 }
 table{
 	color: white;
+	border-style: solid;
+	border-color: blue;
 }
 
 [id="Info"]{
