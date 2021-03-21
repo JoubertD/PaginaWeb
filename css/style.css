@@ -94,6 +94,28 @@ table{
     transition: margin-left .5s;
     color: white;
 }
+[id= "microchip"]{
+    text-align:center;
+	float: left;
+    transition: margin-left .5s;
+    color: white;
+}
+[id= "mDatos"]{
+
+    color: white;
+	background: white;
+	background-color: black;
+	font-weight: bold;
+}
+[id= "form-floating mb-3"]{
+    text-align:center;
+	float: left;
+    transition: margin-left .5s;
+    color: white;
+}
+[id = "floatingInput"]{
+	color: white;
+}
 
 form{
 	position: relative;
