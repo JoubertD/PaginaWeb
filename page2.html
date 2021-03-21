@@ -47,27 +47,41 @@
     <h1 id= "ingresoM">Modulo De Ingreso De Mascota</h1>
     <form name = "AgregarMascota">
   <label for="GET-microchip">Microchip:</label>
-  <input id="GET-microchip" type="text" name="Microchip" placeholder="0000000000">
+  <input id="GET-microchip" type="text" name="Microchip" placeholder="0000000000" required>
   <br>
   <label for = "Get-especie">Especie:</label>
-  <input id="Get-especie" type="text" name="Especie" placeholder="Especie">
+  <input id="Get-especie" type="text" name="Especie" placeholder="Especie" required>
   <br>
-  <p>Sexo:
-  <select name= "sexo">
+  <p id= "sexo"> Sexo:
+  </p>
+  <select name= "sexo" id="sexoseleccion">
     <option value="1" selected="">MACHO</option>
     <option value="2">HEMBRA</option>
-  </select> 
+  </select>
+  <br>
+  <br>
+  <p id="Tamaño">Tamaño:
   </p>
+  <select name= "Tamaño" id="tamañoseleccion">
+  <option value="2">DIMINUTO</option>
+  <option value="1">PEQUEÑO</option>
+  <option value="2" selected="">MEDIANO</option>
+  <option value="2">GRANDE</option>
+  <option value="2">MUY GRANDE</option>
+  </select>
   <br>
   <br>
-  <label for="Get-Tamaño">Tamaño:</label>
-  <input id="Get-Tamaño" type="text" name="Tamaño" placeholder="Tamaño">
+
+  <label for="Get-Peligrosidad" id="peligroso">Es peligroso:</label>
+  <select name= "Peligrosidad" id="peligrososeleccion">
+  <option value="1" selected="">SI</option>
+  <option value="2">NO</option>
+  </select>
   <br>
-  <label for="Get-Peligrosidad">Peligrosidad:</label>
-  <input id="Get-Peligrosidad" type="text" name="Peligrosidad" placeholder="Si o No">
   <br>
   <label for="Get-Ubicacion">Ubicacion:</label>
   <input id="Get-Ubicacion" type="text" name="Ubicacion" placeholder="Usaquen">
+  <br>
   <br>
   <input type="submit" value="Save">
 </form>

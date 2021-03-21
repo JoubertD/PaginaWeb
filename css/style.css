@@ -77,3 +77,41 @@ table{
 [id="ingresoM"]{
 	text-align: center;
 }
+[id="sexo"]{
+	text-align:center;
+	float: left;
+    transition: margin-left .5s;
+}
+
+[id= "Tamaño"]{
+	text-align:center;
+	float: left;
+    transition: margin-left .5s;
+}
+[id= "peligroso"]{
+    text-align:center;
+	float: left;
+    transition: margin-left .5s;
+}
+
+form{
+	position: relative;
+	width: 35%;
+	height: 370px;
+	padding-left: 20px;
+	padding-top: 15px;
+	border-radius: 20px;
+	margin: auto;
+	background-color: #212429;
+}
+input[type="submit"]{
+	position: relative;
+	width: 150px;
+	height: 40px;
+	border-radius: 20px;
+	margin-left: 150px;
+	border: 0px;
+	background-color:  #3E6A6F;
+	color: white;
+	font: 14px ;
+}
