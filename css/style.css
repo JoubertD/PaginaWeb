@@ -5,6 +5,11 @@
 	color: lightblue;
 
 }
+
+
+
+
+
 body{
 	font-family: 'Montserrat', sans-serif;
 	overflow-x: hidden;
@@ -37,9 +42,9 @@ table{
 
 [id="Info"]{
 	position: absolute;
-    bottom: 10px;
-    width: 50%;
-    border: 3px solid #8AC007;
+  bottom: 10px;
+  width: 50%;
+  border: 3px solid #8AC007;
 }
 [id="itembuscado"]{
 	float: left;
@@ -73,7 +78,4 @@ table{
     transition: margin-left .5s;
     padding: 5px;
     font-weight: bold;
-}
-[id="ingresoM"]{
-	text-align: center;
 }

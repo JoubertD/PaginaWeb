@@ -98,7 +98,11 @@ buscar.addEventListener( "click", function() {
         anim.push(datos[i]);
       }
     }
-    tableByAttributte(anim);
+    if (anim.length === 0) {
+      alert("No se encontró ningun animal de esa localidad");
+    }else{
+      tableByAttributte(anim);
+    }
  }
 
 
@@ -111,8 +115,13 @@ buscar.addEventListener( "click", function() {
         anim.push(datos[i]);
       }
     }
-    tableByAttributte(anim);
-    console.log(anim.length);
+
+    if (anim == undefined) {
+      alert("No se encontró ningun animal con esos parámetros");
+    }else{
+      tableByAttributte(anim);
+    }
+
   }
 
 
