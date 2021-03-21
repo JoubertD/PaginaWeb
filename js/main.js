@@ -32,15 +32,22 @@ console.log( "Hello world!" );
 let atributo = "ninguno";
 
 // Getting an element by Id
-let lista = document.getElementById( "lista" );
+let lista = document.getElementById( "lista1" );
 
 lista.addEventListener("click", function() {
   if (lista.selectedIndex === 0) {
   atributo = "ninguno";
+  document.getElementById("lista2").disabled = true;
+  document.getElementById("lista3").disabled = true;
+  console.log("hola")
   }else if(lista.selectedIndex === 1){
     atributo = "especie";
+    document.getElementById("lista2").disabled = false;
+    document.getElementById("lista3").disabled = false;
   }else if(lista.selectedIndex === 2){
     atributo = "localidad";
+    document.getElementById("lista2").disabled = true;
+    document.getElementById("lista3").disabled = true;
   }
 } ); 
 

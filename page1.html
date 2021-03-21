@@ -49,10 +49,24 @@
    
     <p id="filtrado">Filtrar por:</p>
     <form>
-      <select name="dropdown" id="lista">
+      <select name="atributo" id="lista1">
          <option name = "noFiltro" selected=""> No Filtrar </option>
         <option name = "especie" selected=""> Especie </option>
         <option name = "localidad" selected=""> Localidad </option>        
+      </select>
+    </form>
+    <p id="especie">Especie:</p>
+    <form>
+      <select name="size" id="lista2" disabled="true">
+         <option name = "canino" selected="" > Canino </option>
+        <option name = "felino" selected=""> Felino </option>       
+      </select>
+    </form>
+    <p id="dangerous">¿Potencialmente Peligroso?:</p>
+    <form>
+      <select name="race" id="lista3" disabled="true">
+         <option name = "no" selected=""> No </option>
+        <option name = "si" selected=""> Si </option>        
       </select>
     </form>
     <button id = "itembuscado"> Buscar</button>
@@ -66,6 +80,7 @@
           <td>Tamaño</td>
           <td>Peligrosidad</td>
           <td>Localidad</td>
+          <td>Raza</td>
       </tr>
       
     </table>

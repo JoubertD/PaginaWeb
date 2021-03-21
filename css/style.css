@@ -53,10 +53,29 @@ table{
     color: white;
 	background: white;
 	background-color: black;
-
+	font-weight: bold;
+}
+[id="dangerous"]{
+	float: left;
+    transition: margin-left .5s;
+    padding: 2px;
+    color: white;
+	background: white;
+	background-color: black;
+	font-weight: bold;
+}
+[id="especie"]{
+	float: left;
+    transition: margin-left .5s;
+    padding: 2px;
+    color: white;
+	background: white;
+	background-color: black;
+	font-weight: bold;
 }
 [id="filtrado"]{
 	float: left;
     transition: margin-left .5s;
     padding: 5px;
+    font-weight: bold;
 }
