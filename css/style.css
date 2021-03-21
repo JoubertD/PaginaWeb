@@ -20,6 +20,14 @@ select{
 	color: white;
 	background: white;
 	background-color: black;
+	object-position: center;
+	font-family:'Francois One', sans-serif;
+	color:#fff;
+	text-align:center;
+	float: left;
+    transition: margin-left .5s;
+    padding: 5px;
+
 }
 table{
 	color: white;
@@ -27,7 +35,9 @@ table{
 	border-color: blue;
 	width: 100%;
 	margin: 0 auto;
-	font-size: 20px;
+	font-size: 120%;
+	font-weight: bold;
+	float: top;
 }
 
 [id="Info"]{
@@ -36,6 +46,17 @@ table{
   width: 50%;
   border: 3px solid #8AC007;
 }
+[id="itembuscado"]{
+	float: left;
+    transition: margin-left .5s;
+    padding: 2px;
+    color: white;
+	background: white;
+	background-color: black;
+
+}
 [id="filtrado"]{
-	color: white;
+	float: left;
+    transition: margin-left .5s;
+    padding: 5px;
 }
