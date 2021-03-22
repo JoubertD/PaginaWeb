@@ -117,7 +117,7 @@ table{
 	color: white;
 }
 
-form{
+[name = "AgregarMascota" ]{
 	position: relative;
 	width: 35%;
 	height: 370px;
