@@ -4,10 +4,6 @@ let datos = undefined;
 d3.dsv( ";", "../data/pets-citizens.csv" )
   .then( function( data ) {
     datos = data;
-     for (var i = 0; i < datos.length; i++) {
-    datos[i].size.replace("�" , "Ñ");
-    }
-
   } )
   .catch( function( error ) {
     // handle error   
