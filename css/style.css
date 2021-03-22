@@ -170,3 +170,14 @@ input[type="submit"]{
 	float: left;
     transition: margin-left .5s;
 }
+
+[id = "1"]{
+	position: relative;
+	width: 95%;
+	padding-left: 100px;
+	padding-top: 10px;
+	margin:auto;
+	border-style: solid;
+	border-color: orange;
+	color: white;
+}
