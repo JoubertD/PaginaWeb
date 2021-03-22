@@ -1,13 +1,4 @@
 
-let datos = undefined;
-// Loading a CSV using D3
-d3.dsv( ";", "../data/pets-citizens.csv" )
-  .then( function( data ) {
-    datos = data;
-  } )
-  .catch( function( error ) {
-    // handle error   
-  } );
 
 
 var buscar = document.getElementById( "mDatos" );
@@ -18,6 +9,11 @@ buscar.addEventListener( "click", function() {
   if(removeTab != null ){
     removeTab.parentNode.removeChild(removeTab);
   }
+  var comprobante = document.getElementById("formulario");
+
+      if(comprobante != undefined){
+        comprobante.parentNode.removeChild(comprobante);
+      }
   wholeTable();
 
 });
@@ -95,6 +91,12 @@ function wholeTable(){
       var form = document.getElementById("actualizar");
 
       form.addEventListener( "click", function() {
+
+      var comprobante = document.getElementById("formulario");
+
+      if(comprobante != undefined){
+        comprobante.parentNode.removeChild(comprobante);
+      }
      
       var nnn = document.getElementById("da").value;
       if (searchMicrochip(nnn) != undefined) {
@@ -103,6 +105,9 @@ function wholeTable(){
           removeTab.parentNode.removeChild(removeTab);
         }
         var myParent = document.body;
+
+        var form = document.createElement("form");
+        form.id = "formulario";
 
         var label_owner = document.createElement("p"); 
         label_owner.setAttribute("type", "text"); 
@@ -113,6 +118,7 @@ function wholeTable(){
         var address = document.createElement("input"); 
         address.setAttribute("type", "text"); 
         address.setAttribute("id", "address");
+        address.required = true;
 
         var label_address = document.createElement("p"); 
         label_address.setAttribute("type", "text"); 
@@ -123,6 +129,7 @@ function wholeTable(){
         var image = document.createElement("input"); 
         image.setAttribute("type", "text"); 
         image.setAttribute("id", "image");
+        image.required = true;
 
         var label_image = document.createElement("p"); 
         label_image.setAttribute("type", "text"); 
@@ -134,6 +141,7 @@ function wholeTable(){
         var owner = document.createElement("input"); 
         owner.setAttribute("type", "text"); 
         owner.setAttribute("id", "owner");
+        owner.required = true;
 
         var race = document.createElement("select"); 
         race.setAttribute("type", "text"); 
@@ -145,11 +153,12 @@ function wholeTable(){
         var text4 = document.createTextNode("Raza de la mascota:");
         label_race.append(text4);
 
-        var race = document.createElement("select"); 
-        race.setAttribute("type", "text"); 
-        race.setAttribute("id", "race");
-
-
+        var submit = document.createElement("button")
+        submit.setAttribute("type", "submit"); 
+        submit.setAttribute("id", "enviar");
+        submit.setAttribute("class", "btn btn-outline-secondary")
+        var text6 = document.createTextNode("Actualizar");
+        submit.append(text6);
 
        
 
@@ -283,16 +292,19 @@ function wholeTable(){
                 
               }
             }
-
-        myParent.appendChild(label_owner);
-        myParent.appendChild(owner);
-        myParent.appendChild(label_address);
-        myParent.appendChild(address);
-        myParent.appendChild(label_race);
-        myParent.appendChild(race);
-        myParent.appendChild(label_image);
-        myParent.appendChild(image);
+        form.appendChild(label_image);
+        form.appendChild(image);
+        form.append(label_owner);
+        form.append(owner);
+        form.appendChild(label_address);
+        form.appendChild(address);
+        form.appendChild(label_race);
+        form.appendChild(race);
+        form.appendChild(submit);
+        myParent.appendChild(form);
         var h = document.getElementById("race")
+        var textt= h.options[sel.selectedIndex].text;
+        console.log(textt);
 
       }else{
         alert("no se encontró una mascota con ese microchip");
