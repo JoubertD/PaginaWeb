@@ -237,12 +237,17 @@ buscar.addEventListener( "click", function() {
     tabla.appendChild(tblBody);
     tabla.id = "1";
 
-    body.appendChild(tabla);
+    
     }
-   $(document).ready(function() {
-    $('#1').DataTable();
-    } );
+    body.appendChild(tabla);
+    
+    pagination();
 
+    }
+
+    function pagination(){
+      $('1').DataTable();
+      console.log("hola")
     }
 
 
@@ -348,9 +353,7 @@ buscar.addEventListener( "click", function() {
   tabla.appendChild(tblBody);
   tabla.id = "1";
   body.appendChild(tabla);
-  $(document).ready(function() {
-    $('#1').DataTable();
-} );
+  
 
 }
 
