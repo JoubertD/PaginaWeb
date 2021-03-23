@@ -1,6 +1,4 @@
-
-
-
+var pagina = 0;
 
 /*
  * Manipulation of arrays using functions
@@ -115,12 +113,24 @@ buscar.addEventListener( "click", function() {
 
 
     function wholeTable(){
-    var body = document.getElementsByTagName("body")[0];
+    var removeTab = document.getElementById("1");
+    if(removeTab != null ){
+    removeTab.parentNode.removeChild(removeTab);
+    }
+    var rBotonAd = document.getElementById("batras");
+    var rBotonAt = document.getElementById("badelante");
 
+    if(rBotonAd != null ){
+    rBotonAd.parentNode.removeChild(rBotonAd);
+    }
+    if(rBotonAt != null ){
+    rBotonAt.parentNode.removeChild(rBotonAt);
+    }
+    var body = document.getElementsByTagName("body")[0];
     var tabla   = document.createElement("table");
     var tblBody = document.createElement("tbody");
  
-    for (var i = 0; i <= 1000; i++) {
+    for (var i = 0; i <= 20 ; i++) {
     
     var hilera = document.createElement("tr");
 
@@ -148,26 +158,27 @@ buscar.addEventListener( "click", function() {
       }
       tblBody.appendChild(hilera);
     }else{
+      var tomar = i + (pagina*10);
        for (var j = 0; j < 7; j++) {
       var celda = document.createElement("td");
       if(j === 0){
-        var textoCelda = document.createTextNode(i);
+        var textoCelda = document.createTextNode(tomar);
       }else if(j === 1){
-        var textoCelda = document.createTextNode(datos[i].microchip);
+        var textoCelda = document.createTextNode(datos[tomar].microchip);
       }else if(j === 2){
-        var textoCelda = document.createTextNode(datos[i].species);
+        var textoCelda = document.createTextNode(datos[tomar].species);
       }else if(j === 3){
-        var textoCelda = document.createTextNode(datos[i].sex);
+        var textoCelda = document.createTextNode(datos[tomar].sex);
       }else if(j === 4){
         if (datos[i].size === "PEQUE�O") {
           var textoCelda = document.createTextNode("PEQUEÑO");
         }else{
-        var textoCelda = document.createTextNode(datos[i].size);
+        var textoCelda = document.createTextNode(datos[tomar].size);
       }
       }else if(j === 5){
-        var textoCelda = document.createTextNode(datos[i].potentDangerous);
+        var textoCelda = document.createTextNode(datos[tomar].potentDangerous);
       }else if(j === 6){
-        var textoCelda = document.createTextNode(datos[i].neighborhood);
+        var textoCelda = document.createTextNode(datos[tomar].neighborhood);
       }
       celda.appendChild(textoCelda);
       hilera.appendChild(celda);
@@ -179,8 +190,33 @@ buscar.addEventListener( "click", function() {
 
     body.appendChild(tabla);
     }
-    console.log(tabla.id);
+    var botonatras = document.createElement("button");
+    var botonadelante = document.createElement("button");
+    botonatras.setAttribute("type","button");
+    botonatras.setAttribute("id","batras");
+    botonadelante.setAttribute("type","button");
+    botonadelante.setAttribute("id","badelante");
+    var textoadelante = document.createTextNode("Siguiente");
+    var textoatras = document.createTextNode("Atras");
+    botonadelante.append(textoadelante);
+    botonatras.append(textoatras);
+    body.appendChild(botonatras);
+    body.appendChild(botonadelante);
+    botonatras.addEventListener("click", function(){
+      if(pagina === 0){
+
+      }else{
+        pagina = pagina -1;
+        wholeTable();
+      }
+
+    });
+   botonadelante.addEventListener("click", function(){
+        pagina = pagina + 1;
+        wholeTable();
+    });
     }
+
 
 
 

@@ -172,9 +172,9 @@ input[type="submit"]{
 }
 
 [id = "1"]{
+	border-spacing: show;
 	position: relative;
 	width: 95%;
-	padding-left: 100px;
 	padding-top: 10px;
 	margin:auto;
 	border-style: solid;
