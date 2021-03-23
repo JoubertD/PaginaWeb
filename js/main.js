@@ -278,12 +278,7 @@ buscar.addEventListener( "click", function() {
     }
     tblBody.appendChild(hilera);
   }
-
   tabla.appendChild(tblBody);
   tabla.id = "1";
   body.appendChild(tabla);
-
-
 }
-
-
