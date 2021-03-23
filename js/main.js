@@ -13,16 +13,43 @@ let lista = document.getElementById( "lista1" );
 lista.addEventListener("click", function() {
     
   if (lista.selectedIndex === 0) {
+   var rBotonAd = document.getElementById("batras");
+    var rBotonAt = document.getElementById("badelante");
+
+    if(rBotonAd != null ){
+    rBotonAd.parentNode.removeChild(rBotonAd);
+    }
+    if(rBotonAt != null ){
+    rBotonAt.parentNode.removeChild(rBotonAt);
+    }
   atributo = "ninguno";
   atributo2 = "ninguno";
   atributo3 = "ninguno";
   document.getElementById("lista2").disabled = true;
   document.getElementById("lista3").disabled = true;
   }else if(lista.selectedIndex === 1){
+    var rBotonAd = document.getElementById("batras");
+    var rBotonAt = document.getElementById("badelante");
+
+    if(rBotonAd != null ){
+    rBotonAd.parentNode.removeChild(rBotonAd);
+    }
+    if(rBotonAt != null ){
+    rBotonAt.parentNode.removeChild(rBotonAt);
+    }
     atributo = "especie";
     document.getElementById("lista2").disabled = false;
     document.getElementById("lista3").disabled = false;
   }else if(lista.selectedIndex === 2){
+     var rBotonAd = document.getElementById("batras");
+    var rBotonAt = document.getElementById("badelante");
+
+    if(rBotonAd != null ){
+    rBotonAd.parentNode.removeChild(rBotonAd);
+    }
+    if(rBotonAt != null ){
+    rBotonAt.parentNode.removeChild(rBotonAt);
+    }
     atributo = "localidad";
     document.getElementById("lista2").disabled = true;
     document.getElementById("lista3").disabled = true;
@@ -53,10 +80,18 @@ let lista2 = document.getElementById( "lista2" );
 let buscar = document.getElementById( "itembuscado" );
 
 buscar.addEventListener( "click", function() {
-  var removeTab = document.getElementById("1");
-    if(removeTab != null ){
-    removeTab.parentNode.removeChild(removeTab);
-  }
+  var tabla = document.getElementById("1");
+  var cre_AR = document.getElementById("formulario2");
+  var comprobante = document.getElementById("formulario");
+   if(comprobante != undefined){
+        comprobante.parentNode.removeChild(comprobante);
+      }
+       if(tabla != undefined){
+        tabla.parentNode.removeChild(tabla);
+      }
+      if(cre_AR != undefined){
+        cre_AR.parentNode.removeChild(cre_AR);
+      }
   console.log(lista.selectedIndex);
   if(lista.selectedIndex === 0){
   wholeTable();
@@ -232,9 +267,11 @@ buscar.addEventListener( "click", function() {
     var botonatras = document.createElement("button");
     var botonadelante = document.createElement("button");
     botonatras.setAttribute("type","button");
+    botonatras.setAttribute("class","btn btn-outline-warning bg-dark");
     botonatras.setAttribute("id","batras");
     botonadelante.setAttribute("type","button");
     botonadelante.setAttribute("id","badelante");
+    botonadelante.setAttribute("class","btn btn-outline-warning bg-dark");
     var textoadelante = document.createTextNode("Siguiente");
     var textoatras = document.createTextNode("Atras");
     botonadelante.append(textoadelante);

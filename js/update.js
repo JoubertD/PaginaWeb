@@ -11,10 +11,17 @@
 
       form.addEventListener( "click", function() {
 
-      var comprobante = document.getElementById("formulario");
-
-      if(comprobante != undefined){
+      var tabla = document.getElementById("1");
+    var cre_AR = document.getElementById("formulario2");
+    var comprobante = document.getElementById("formulario");
+    if(comprobante != undefined){
         comprobante.parentNode.removeChild(comprobante);
+      }
+       if(tabla != undefined){
+        tabla.parentNode.removeChild(tabla);
+      }
+      if(cre_AR != undefined){
+        cre_AR.parentNode.removeChild(cre_AR);
       }
      
       var nnn = document.getElementById("da").value;
