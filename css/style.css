@@ -123,8 +123,10 @@ table{
 	color: white;
 	font-weight: bold;
 }
-[id = "et"]{
-	color: gray;
+[id = "crear"]{
+	color: white;
+	background: white;
+	background-color: black;
 	font-weight: bold;
 }
 
@@ -180,4 +182,5 @@ input[type="submit"]{
 	border-style: solid;
 	border-color: orange;
 	color: white;
+	font-size: 20px;
 }

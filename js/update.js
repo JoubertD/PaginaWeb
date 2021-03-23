@@ -1,91 +1,10 @@
 
 
 
-var buscar = document.getElementById( "mDatos" );
 
 
-buscar.addEventListener( "click", function() {
-  var removeTab = document.getElementById("1");
-  if(removeTab != null ){
-    removeTab.parentNode.removeChild(removeTab);
-  }
-  var comprobante = document.getElementById("formulario");
-
-      if(comprobante != undefined){
-        comprobante.parentNode.removeChild(comprobante);
-      }
-  wholeTable();
-
-});
 
 
-function wholeTable(){
-    var body = document.getElementsByTagName("body")[0];
-
-    var tabla   = document.createElement("table");
-    var tblBody = document.createElement("tbody");
- 
-    for (var i = 0; i <= 1000; i++) {
-    
-    var hilera = document.createElement("tr");
-
-    if(i == 0){
-      console.log("llegue aca")
-      for (var j = 0; j < 7; j++) {
-      var celda = document.createElement("td");
-      if(j === 0){
-        var textoCelda = document.createTextNode("#");
-      }else if(j === 1){
-        var textoCelda = document.createTextNode("Microchip");
-      }else if(j === 2){
-        var textoCelda = document.createTextNode("Especie");
-      }else if(j === 3){
-        var textoCelda = document.createTextNode("Sexo");
-      }else if(j === 4){
-        var textoCelda = document.createTextNode("Tamaño");
-      }else if(j === 5){
-        var textoCelda = document.createTextNode("Peligrosidad");
-      }else if(j === 6){
-        var textoCelda = document.createTextNode("Localidad");
-      }
-      celda.appendChild(textoCelda);
-      hilera.appendChild(celda);
-      }
-      tblBody.appendChild(hilera);
-    }else{
-       for (var j = 0; j < 7; j++) {
-      var celda = document.createElement("td");
-      if(j === 0){
-        var textoCelda = document.createTextNode(i);
-      }else if(j === 1){
-        var textoCelda = document.createTextNode(datos[i].microchip);
-      }else if(j === 2){
-        var textoCelda = document.createTextNode(datos[i].species);
-      }else if(j === 3){
-        var textoCelda = document.createTextNode(datos[i].sex);
-      }else if(j === 4){
-        if (datos[i].size === "PEQUE�O") {
-          var textoCelda = document.createTextNode("PEQUEÑO");
-        }else{
-        var textoCelda = document.createTextNode(datos[i].size);
-      }
-      }else if(j === 5){
-        var textoCelda = document.createTextNode(datos[i].potentDangerous);
-      }else if(j === 6){
-        var textoCelda = document.createTextNode(datos[i].neighborhood);
-      }
-      celda.appendChild(textoCelda);
-      hilera.appendChild(celda);
-    }
-     tblBody.appendChild(hilera);
-    }
-    tabla.appendChild(tblBody);
-    tabla.id = "1";
-
-    body.appendChild(tabla);
-    }
-    console.log(tabla.id);
-    }
 
     
       var form = document.getElementById("actualizar");
@@ -99,7 +18,9 @@ function wholeTable(){
       }
      
       var nnn = document.getElementById("da").value;
+
       if (searchMicrochip(nnn) != undefined) {
+        var pos = getPosition(nnn);
         var removeTab = document.getElementById("1");
         if(removeTab != null ){
           removeTab.parentNode.removeChild(removeTab);
@@ -107,7 +28,8 @@ function wholeTable(){
         var myParent = document.body;
 
         var form = document.createElement("form");
-        form.id = "formulario";
+        form.setAttribute("id", "formulario");
+        form.setAttribute("onsubmit" , "return false");
 
         var label_owner = document.createElement("p"); 
         label_owner.setAttribute("type", "text"); 
@@ -154,8 +76,8 @@ function wholeTable(){
         label_race.append(text4);
 
         var submit = document.createElement("button")
-        submit.setAttribute("type", "submit"); 
         submit.setAttribute("id", "enviar");
+        submit.setAttribute("type", "submit"); 
         submit.setAttribute("class", "btn btn-outline-secondary")
         var text6 = document.createTextNode("Actualizar");
         submit.append(text6);
@@ -303,8 +225,42 @@ function wholeTable(){
         form.appendChild(submit);
         myParent.appendChild(form);
         var h = document.getElementById("race")
-        var textt= h.options[sel.selectedIndex].text;
-        console.log(textt);
+        var raz = h.options[0].text;
+
+      h.addEventListener("click", function(){
+          raz = h.options[h.selectedIndex].text;
+      });
+
+      submit.addEventListener("click", function(){
+
+        var im = image.value;
+        var du = owner.value;
+        var ad = address.value;
+       
+        if(im != "" && du != "" && ad != ""){
+
+          datos[pos]["race"] = raz;  
+          datos[pos]["image"] = im;  
+          datos[pos]["owner"] = du;  
+          datos[pos]["address"] = ad; 
+
+          alert("la mascota fue actualizada correctamente"); 
+
+          var comprobante = document.getElementById("formulario");
+
+          if(comprobante != undefined){
+          comprobante.parentNode.removeChild(comprobante);
+         }
+
+
+
+
+        }
+
+      });
+
+    
+
 
       }else{
         alert("no se encontró una mascota con ese microchip");
@@ -318,11 +274,26 @@ function wholeTable(){
     function searchMicrochip(value){
 
     var result;
+    var posicion;
 
     for (var i = 0; i < datos.length; i++) {
       if(datos[i].microchip === value){
         result = datos[i];
+        posicion = i;
       }
     }
     return result;
+    }
+
+    function getPosition(value){
+
+    var result;
+    var posicion;
+
+    for (var i = 0; i < datos.length; i++) {
+      if(datos[i].microchip === value){
+        posicion = i;
+      }
+    }
+    return posicion;
     }

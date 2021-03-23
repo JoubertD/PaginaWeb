@@ -45,13 +45,28 @@
         </div>
       </div>
     </nav>
+
+
+
+        <!-- <button id="mDatos" class="btn btn-outline-dark text-light "> Mostrar Datos</button> -->
+   
+    <div class="form-floating mb-3">
+     
+  <input type="text" class="form-control bg-dark text-light" id="da" placeholder="15416346" >
+   <label for="floatingInput bg-warning" id="et">Microchip de la Mascota para actualizar</label>
+  
+  <button id="actualizar" class="btn btn-outline-dark text-light"> Buscar Mascota</button>
+  <button id = "crear" class="btn btn-outline-dark text-light">Crear Nuevo Animal</button>
+
+  </div>
    
     <p id="filtrado">Filtrar por:</p>
     <form>
       <select name="atributo" id="lista1">
          <option name = "noFiltro" selected=""> No Filtrar </option>
         <option name = "especie" selected=""> Especie </option>
-        <option name = "localidad" selected=""> Localidad </option>        
+        <option name = "localidad" selected=""> Localidad </option>
+        <option name = "localidad" selected=""> Registro Completo </option>          
       </select>
     </form>
     <p id="especie">Especie:</p>
@@ -68,11 +83,26 @@
         <option name = "si" selected=""> Si </option>        
       </select>
     </form>
-    <button id = "itembuscado"> Buscar</button>
-   
+    <button id = "itembuscado">Filtrar</button>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+    
+
+
+
     <script type="text/javascript" src="js/load-csv.js"></script>
      <script src="js/main.js" type="text/javascript"></script>
-     
+     <script src="js/update.js" type="text/javascript"></script>
+     <script src="js/dataTables.js" type="text/javascript"></script>
+     <script src="js/create.js" type="text/javascript"></script>
+     <script src="js/jquery.js" type="text/javascript"></script>
+     <script src="js/bootstrap.js" type="text/javascript"></script>
+
 
 </body>
 </html>

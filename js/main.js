@@ -65,13 +65,18 @@ buscar.addEventListener( "click", function() {
     if(removeTab != null ){
     removeTab.parentNode.removeChild(removeTab);
   }
+  console.log(lista.selectedIndex);
   if(lista.selectedIndex === 0){
   wholeTable();
   }else if(lista.selectedIndex === 1){
     searchByVariousAttributtes(atributo2,atributo3);
   }else if(lista.selectedIndex === 2){
     var local = prompt("Escriba la localidad");
+    local = local.toUpperCase();
     searchByNeighbourhood(local);
+  }else if(lista.selectedIndex === 3){
+    console.log("hola");
+    filterByCompleteRegister();
   }
 });
 
@@ -111,10 +116,32 @@ buscar.addEventListener( "click", function() {
 
   }
 
+  function filterByCompleteRegister(){
+
+   const ani = new Array();
+  
+    for (var i = 0; i < datos.length; i++) {
+      if(datos[i].race != undefined){
+        ani.push(datos[i]);
+
+      }
+    }
+
+   
+
+    if (ani.length === 0) {
+      alert("No se encontró ningun animal con registro completo");
+    }else{
+    tableByAttributte(ani);
+    }
+
+  }
+
 
 
 
     function wholeTable(){
+
     var body = document.getElementsByTagName("body")[0];
 
     var tabla   = document.createElement("table");
@@ -126,7 +153,7 @@ buscar.addEventListener( "click", function() {
 
     if(i == 0){
       console.log("llegue aca")
-      for (var j = 0; j < 7; j++) {
+      for (var j = 0; j <= 10; j++) {
       var celda = document.createElement("td");
       if(j === 0){
         var textoCelda = document.createTextNode("#");
@@ -142,13 +169,21 @@ buscar.addEventListener( "click", function() {
         var textoCelda = document.createTextNode("Peligrosidad");
       }else if(j === 6){
         var textoCelda = document.createTextNode("Localidad");
+      }else if(j === 7){
+        var textoCelda = document.createTextNode("Raza");
+      }else if(j === 8){
+        var textoCelda = document.createTextNode("Dueño");
+      }else if(j === 9){
+        var textoCelda = document.createTextNode("Dirección");
+      }else if(j === 10){
+        var textoCelda = document.createTextNode("Imagen (link)");
       }
       celda.appendChild(textoCelda);
       hilera.appendChild(celda);
       }
       tblBody.appendChild(hilera);
     }else{
-       for (var j = 0; j < 7; j++) {
+       for (var j = 0; j <= 10; j++) {
       var celda = document.createElement("td");
       if(j === 0){
         var textoCelda = document.createTextNode(i);
@@ -168,6 +203,31 @@ buscar.addEventListener( "click", function() {
         var textoCelda = document.createTextNode(datos[i].potentDangerous);
       }else if(j === 6){
         var textoCelda = document.createTextNode(datos[i].neighborhood);
+      }else if(j === 7){
+
+        if(datos[i].race === undefined){
+          var textoCelda = document.createTextNode("---");
+        }else{
+          var textoCelda = document.createTextNode(datos[i].race);
+        }
+      }else if(j === 8){
+        if(datos[i].owner === undefined){
+          var textoCelda = document.createTextNode("---");
+        }else{
+          var textoCelda = document.createTextNode(datos[i].owner);
+        }
+      }else if(j === 9){
+        if(datos[i].address === undefined){
+          var textoCelda = document.createTextNode("---");
+        }else{
+          var textoCelda = document.createTextNode(datos[i].address);
+        }
+      }else if(j === 10){
+        if(datos[i].image === undefined){
+          var textoCelda = document.createTextNode("---");
+        }else{
+          var textoCelda = document.createTextNode(datos[i].image);
+        }
       }
       celda.appendChild(textoCelda);
       hilera.appendChild(celda);
@@ -179,7 +239,10 @@ buscar.addEventListener( "click", function() {
 
     body.appendChild(tabla);
     }
-    console.log(tabla.id);
+   $(document).ready(function() {
+    $('#1').DataTable();
+    } );
+
     }
 
 
@@ -189,12 +252,9 @@ buscar.addEventListener( "click", function() {
 
   var tabla   = document.createElement("table");
   var tblBody = document.createElement("tbody");
-
-  for (var i = 0; i < animales.length; i++) {
-    var hilera = document.createElement("tr");
-
-    if(i === 0){
-      for (var j = 0; j < 7; j++) {
+  var contador = 1;
+  var hilera = document.createElement("tr");
+      for (var j = 0; j <= 10; j++) {
       var celda = document.createElement("td");
       if(j === 0){
         var textoCelda = document.createTextNode("#");
@@ -210,12 +270,29 @@ buscar.addEventListener( "click", function() {
         var textoCelda = document.createTextNode("Peligrosidad");
       }else if(j === 6){
         var textoCelda = document.createTextNode("Localidad");
+      }else if(j === 7){
+        var textoCelda = document.createTextNode("Raza");
+      }else if(j === 8){
+        var textoCelda = document.createTextNode("Dueño");
+      }else if(j === 9){
+        var textoCelda = document.createTextNode("Dirección");
+      }else if(j === 10){
+        var textoCelda = document.createTextNode("Imagen (link)");
       }
       celda.appendChild(textoCelda);
       hilera.appendChild(celda);
+      
       }
-    }else{
-       for (var j = 0; j < 7; j++) {
+      tblBody.appendChild(hilera);
+      
+
+  for (var i = 0; i < animales.length; i++) {
+    var hilera = document.createElement("tr");
+    
+
+   
+    
+       for (var j = 0; j <= 10; j++) {
       var celda = document.createElement("td");
       if(j === 0){
         var textoCelda = document.createTextNode(i);
@@ -235,18 +312,45 @@ buscar.addEventListener( "click", function() {
         var textoCelda = document.createTextNode(animales[i].potentDangerous);
       }else if(j === 6){
         var textoCelda = document.createTextNode(animales[i].neighborhood);
+      }else if(j === 7){
+
+        if(animales[i].race === undefined){
+          var textoCelda = document.createTextNode("---");
+        }else{
+          var textoCelda = document.createTextNode(animales[i].race);
+        }
+      }else if(j === 8){
+        if(animales[i].owner === undefined){
+          var textoCelda = document.createTextNode("---");
+        }else{
+          var textoCelda = document.createTextNode(animales[i].owner);
+        }
+      }else if(j === 9){
+        if(animales[i].address === undefined){
+          var textoCelda = document.createTextNode("---");
+        }else{
+          var textoCelda = document.createTextNode(animales[i].address);
+        }
+      }else if(j === 10){
+        if(animales[i].image === undefined){
+          var textoCelda = document.createTextNode("---");
+        }else{
+          var textoCelda = document.createTextNode(animales[i].image);
+        }
       }
       celda.appendChild(textoCelda);
       hilera.appendChild(celda);
         }
-    }
+    
     tblBody.appendChild(hilera);
   }
 
   tabla.appendChild(tblBody);
   tabla.id = "1";
   body.appendChild(tabla);
-
+  $(document).ready(function() {
+    $('#1').DataTable();
+} );
 
 }
 
