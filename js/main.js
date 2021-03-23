@@ -241,14 +241,11 @@ buscar.addEventListener( "click", function() {
     }
     body.appendChild(tabla);
     
-    pagination();
+
 
     }
 
-    function pagination(){
-      $('1').DataTable();
-      console.log("hola")
-    }
+ 
 
 
 

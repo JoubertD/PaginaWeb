@@ -147,7 +147,7 @@
 
         var submit = document.createElement("button")
         submit.setAttribute("id", "crearN");
-        submit.setAttribute("type", "submit"); 
+        submit.setAttribute("type", "button"); 
         submit.setAttribute("class", "btn btn-outline-secondary")
         var text6 = document.createTextNode("Crear");
         submit.append(text6);

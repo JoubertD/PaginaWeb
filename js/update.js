@@ -77,7 +77,7 @@
 
         var submit = document.createElement("button")
         submit.setAttribute("id", "enviar");
-        submit.setAttribute("type", "submit"); 
+        submit.setAttribute("type", "button"); 
         submit.setAttribute("class", "btn btn-outline-secondary")
         var text6 = document.createTextNode("Actualizar");
         submit.append(text6);
