@@ -4,12 +4,16 @@
 
       var comprobante = document.getElementById("formulario");
       var tabla = document.getElementById("1");
+      var cre_AR = document.getElementById("formulario2");
 
       if(comprobante != undefined){
         comprobante.parentNode.removeChild(comprobante);
       }
        if(tabla != undefined){
         tabla.parentNode.removeChild(tabla);
+      }
+      if(cre_AR != undefined){
+        cre_AR.parentNode.removeChild(cre_AR);
       }
      
      
@@ -93,7 +97,7 @@
         o1.text = "MINIATURA";
         var o2 = document.createElement("option");
         o2.value = "PEQUE�O";
-        o2.text = "PEQUE�O";
+        o2.text = "PEQUEÑO";
         var o3 = document.createElement("option");
         o3.value = "MEDIANO";
         o3.text = "MEDIANO";
@@ -148,7 +152,7 @@
         var submit = document.createElement("button")
         submit.setAttribute("id", "crearN");
         submit.setAttribute("type", "button"); 
-        submit.setAttribute("class", "btn btn-outline-secondary")
+        submit.setAttribute("class", "btn btn-outline-warning bg-secondary")
         var text6 = document.createTextNode("Crear");
         submit.append(text6);
 
